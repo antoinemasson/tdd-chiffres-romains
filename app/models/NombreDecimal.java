@@ -3,6 +3,7 @@ package models;
 import java.util.*;
 import javax.validation.*;
 import play.data.validation.Constraints.*;
+//import 
 
 public class NombreDecimal {
     @Required
@@ -13,16 +14,21 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-	if (valeur==1)
-	    return "I";
-	else if (valeur==2)
-	    return "II";
-	else if (valeur==3)
-	    return "III";
-	else if (valeur==4)
-	    return "IV";
-	else if (valeur==5)
-	    return "V";
+	String [] res = new String[11];
+	res[0]="";
+	res[1]="I";
+	res[2]="II";
+	res[3]="III";
+	res[4]="IV";
+	res[5]="V";
+	res[6]="VI";
+	res[7]="VII";
+	res[8]="VIII";
+	res[9]="IX";
+	res[10]="X";
+
+	if (valeur<=11)
+	    return res[valeur];
 	else return "";
     }
 }
