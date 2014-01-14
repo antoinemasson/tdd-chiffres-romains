@@ -19,6 +19,10 @@ public class NombreDecimal {
 	    return "II";
 	else if (valeur==3)
 	    return "III";
+	else if (valeur==4)
+	    return "IV";
+	else if (valeur==5)
+	    return "V";
 	else return "";
     }
 }
