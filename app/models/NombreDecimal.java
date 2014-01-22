@@ -14,7 +14,7 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-	String [] res = new String[11];
+	String [] res = new String[20];
 	res[0]="";
 	res[1]="I";
 	res[2]="II";
@@ -26,9 +26,19 @@ public class NombreDecimal {
 	res[8]="VIII";
 	res[9]="IX";
 	res[10]="X";
+	res[11]="XX";
+	res[12]="XXX";
+	res[13]="XL";
+	res[14]="L";
+	res[15]="LX";
+	res[16]="LXX";
+	res[17]="LXXX";
+	res[18]="XC";
+	res[19]="C";
 
-	if (valeur<=11)
-	    return res[valeur];
+
+	if (valeur<=101)
+	    return res[valeur/10+9]+res[valeur%10];
 	else return "";
     }
 }
