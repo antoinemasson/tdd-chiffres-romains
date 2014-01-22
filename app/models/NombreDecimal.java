@@ -14,12 +14,14 @@ public class NombreDecimal {
     }
 
     public String en_romain() {
-	static String[] res = {
+	String[] res = {
 		"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC", "C"};
 	
 		
 
-	if (valeur<=101)
+	if (valeur<10)
+	    return res[valeur%10];
+	else if (valeur<101)
 	    return res[valeur/10+9]+res[valeur%10];
 	else return "";
     }
